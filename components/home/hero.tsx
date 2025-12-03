@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
-import { DataFlowDiagram } from "@/components/data-flow-diagram"
+import AnimatedBeamDemo from "@/components/animated-beam-demo"
 import { useLanguage } from "@/contexts/language-context"
 import { interTight } from "@/lib/fonts"
 
@@ -52,7 +52,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Flow Diagram */}
-            <DataFlowDiagram />
+            <AnimatedBeamDemo />
 
             {/* Book a call and Learn more buttons */}
             <motion.div

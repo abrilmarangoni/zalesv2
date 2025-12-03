@@ -42,7 +42,7 @@ function HomeContent() {
     setTimeout(() => {
       const element = document.getElementById(elementId)
       if (element) {
-        const headerOffset = 120 // Account for sticky header height + margin
+        const headerOffset = 80
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
         const offsetPosition = elementPosition - headerOffset
 
@@ -57,11 +57,11 @@ function HomeContent() {
   return (
     <>
     <div className="min-h-screen w-full relative bg-black">
-      {/* Desktop Header - Movido fuera del contenedor para sticky en toda la página */}
+      {/* Desktop Header - Parte del flujo normal de la página */}
       <header
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-[9999] hidden w-[75%] flex-row items-center justify-between rounded-lg bg-background/80 md:flex backdrop-blur-sm border border-border/40 shadow-lg px-6 py-4"
+        className="relative w-full z-[9999] hidden flex-row items-center justify-between bg-black md:flex border-b border-border/40 px-6 py-4"
       >
-        <div className="z-50 flex items-center justify-center gap-2 ml-6">
+        <div className="z-50 flex items-center justify-center gap-2">
           <img 
             src="/image13.png" 
             alt="ZalesMachine" 
@@ -69,14 +69,14 @@ function HomeContent() {
           />
         </div>
 
-        <div className={`absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-base font-extralight text-muted-foreground md:flex md:space-x-2 ${interTight.className} px-40`}>
+        <div className={`hidden flex-1 flex-row items-center justify-center space-x-2 text-base font-extralight text-muted-foreground md:flex md:space-x-2 ${interTight.className}`}>
           <a
             className="relative px-3 py-2 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
             onClick={(e) => {
               e.preventDefault()
               const element = document.getElementById("features")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 80
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -95,7 +95,7 @@ function HomeContent() {
               e.preventDefault()
               const element = document.getElementById("pricing")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 80
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -114,7 +114,7 @@ function HomeContent() {
               e.preventDefault()
               const element = document.getElementById("testimonials")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 80
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -133,7 +133,7 @@ function HomeContent() {
               e.preventDefault()
               const element = document.getElementById("faq")
               if (element) {
-                const headerOffset = 120 // Account for sticky header height + margin
+                const headerOffset = 80
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -185,7 +185,7 @@ function HomeContent() {
               e.preventDefault()
               const element = document.getElementById("pricing")
               if (element) {
-                const headerOffset = 120
+                const headerOffset = 80
                 const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
                 const offsetPosition = elementPosition - headerOffset
 
@@ -201,8 +201,8 @@ function HomeContent() {
         </div>
       </header>
 
-      {/* Mobile Header - Movido fuera del contenedor para sticky en toda la página */}
-      <header className="fixed top-6 left-4 right-4 z-[9999] flex w-auto flex-row items-center justify-between rounded-lg bg-background/80 backdrop-blur-sm border border-border/40 shadow-lg md:hidden px-5 py-6">
+      {/* Mobile Header - Parte del flujo normal de la página */}
+      <header className="relative w-full z-[9999] flex flex-row items-center justify-between bg-black border-b border-border/40 md:hidden px-5 py-6">
         <div className="flex items-center justify-center gap-2 ml-4">
           <img 
             src="/image13.png" 
@@ -233,7 +233,7 @@ function HomeContent() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[9998] bg-black/50 backdrop-blur-sm md:hidden">
-          <div className="absolute top-20 left-4 right-4 bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl p-6">
+          <div className="absolute top-24 left-4 right-4 bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl p-6">
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => handleMobileNavClick("features")}
