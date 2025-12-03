@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col pt-0">
-        <div className="container mx-auto px-4 pt-24 sm:pt-28 pb-24 sm:pb-32 relative z-10 flex-1 flex flex-col">
+        <div className="container mx-auto px-4 pt-[120px] pb-24 sm:pb-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-5xl lg:max-w-6xl text-center flex-1 flex flex-col justify-start">
             {/* Main Heading */}
             <motion.div
@@ -29,7 +29,6 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-8"
-              style={{ marginTop: "58px" }}
             >
               <h1 id="main-title" className="text-4xl font-extralight tracking-tight text-foreground sm:text-6xl lg:text-7xl">
                 {t("hero.title")} <span className="bg-gradient-to-r from-[#e0c5f0] to-[#b3d5ff] bg-clip-text text-transparent" style={{ fontWeight: 200, fontFamily: 'inherit', fontSize: 'inherit', letterSpacing: 'inherit' }}>ZalesMachine</span>
@@ -52,7 +51,9 @@ export default function Hero() {
             </motion.div>
 
             {/* Flow Diagram */}
-            <AnimatedBeamDemo />
+            <div className="-mt-16">
+              <AnimatedBeamDemo />
+            </div>
 
             {/* Book a call and Learn more buttons */}
             <motion.div

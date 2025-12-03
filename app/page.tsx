@@ -59,9 +59,10 @@ function HomeContent() {
     <div className="min-h-screen w-full relative bg-black">
       {/* Desktop Header - Parte del flujo normal de la página */}
       <header
-        className="relative w-full z-[9999] hidden flex-row items-center justify-between bg-black md:flex border-b border-border/40 px-6 py-4"
+        className="relative w-full z-[9999] hidden flex-row items-center justify-between bg-black md:flex px-12 py-6"
+        style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.1)" }}
       >
-        <div className="z-50 flex items-center justify-center gap-2">
+        <div className="z-50 flex items-center justify-center gap-2 ml-8">
           <img 
             src="/image13.png" 
             alt="ZalesMachine" 
@@ -69,9 +70,9 @@ function HomeContent() {
           />
         </div>
 
-        <div className={`hidden flex-1 flex-row items-center justify-center space-x-2 text-base font-extralight text-muted-foreground md:flex md:space-x-2 ${interTight.className}`}>
+        <div className={`hidden flex-1 flex-row items-center justify-center space-x-6 text-base font-extralight text-muted-foreground md:flex md:space-x-6 ${interTight.className}`}>
           <a
-            className="relative px-3 py-2 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
+            className="relative px-5 py-2.5 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
             onClick={(e) => {
               e.preventDefault()
               const element = document.getElementById("features")
@@ -90,7 +91,7 @@ function HomeContent() {
             <span className="relative z-20 text-inherit">{t("nav.features")}</span>
           </a>
           <a
-            className="relative px-3 py-2 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
+            className="relative px-5 py-2.5 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
             onClick={(e) => {
               e.preventDefault()
               const element = document.getElementById("pricing")
@@ -109,7 +110,7 @@ function HomeContent() {
             <span className="relative z-20 text-inherit">{t("nav.pricing")}</span>
           </a>
           <a
-            className="relative px-3 py-2 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
+            className="relative px-5 py-2.5 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
             onClick={(e) => {
               e.preventDefault()
               const element = document.getElementById("testimonials")
@@ -128,7 +129,7 @@ function HomeContent() {
             <span className="relative z-20 text-inherit">{t("nav.testimonials")}</span>
           </a>
           <a
-            className="relative px-3 py-2 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
+            className="relative px-5 py-2.5 text-muted-foreground hover:text-white transition-colors cursor-pointer whitespace-nowrap font-extralight"
             onClick={(e) => {
               e.preventDefault()
               const element = document.getElementById("faq")
@@ -154,14 +155,14 @@ function HomeContent() {
           </a>
         </div>
 
-        <div className="flex items-center gap-3 relative z-50">
+        <div className="flex items-center gap-4 relative z-50 mr-8">
           <button
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()
               setLanguage(language === "en" ? "es" : "en")
             }}
-            className={`${interTight.className} flex items-center gap-1.5 rounded-md border border-border/50 bg-background/50 hover:bg-background/80 transition-colors font-extralight text-foreground cursor-pointer whitespace-nowrap px-2.5 py-1.5 text-sm`}
+            className={`${interTight.className} flex items-center gap-1.5 rounded-md border border-white/20 bg-white/5 hover:bg-white/10 transition-colors font-extralight text-foreground cursor-pointer whitespace-nowrap px-3 py-2 text-sm`}
             aria-label="Change language"
             type="button"
           >
@@ -170,7 +171,7 @@ function HomeContent() {
           </button>
           <a
             href="#pricing"
-            className={`${interTight.className} rounded-md font-extralight relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center text-white px-5 py-2.5 text-base`}
+            className={`${interTight.className} rounded-md font-extralight relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center text-white px-6 py-2.5 text-base`}
             style={{
               background: "linear-gradient(to bottom, rgba(181, 126, 220, 0.9), rgba(181, 126, 220, 0.8))",
               boxShadow: "0 4px 14px 0 rgba(0, 0, 0, 0.6), 0 0 20px rgba(181, 126, 220, 0.3)",
@@ -202,8 +203,11 @@ function HomeContent() {
       </header>
 
       {/* Mobile Header - Parte del flujo normal de la página */}
-      <header className="relative w-full z-[9999] flex flex-row items-center justify-between bg-black border-b border-border/40 md:hidden px-5 py-6">
-        <div className="flex items-center justify-center gap-2 ml-4">
+      <header 
+        className="relative w-full z-[9999] flex flex-row items-center justify-between bg-black md:hidden px-5 py-6"
+        style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.1)" }}
+      >
+        <div className="flex items-center justify-center gap-2 ml-2">
           <img 
             src="/image13.png" 
             alt="ZalesMachine" 
